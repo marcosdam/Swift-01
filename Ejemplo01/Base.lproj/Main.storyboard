@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ejemplo01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXL-2Y-WSq">
+                                <rect key="frame" x="110" y="163" width="194" height="45"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="pKq-Sq-0MN"/>
+                                </constraints>
+                                <state key="normal" title="Tócame">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnContadorClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="U31-87-lLn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has tocado: 0 veces" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kb-Wo-hsU">
+                                <rect key="frame" x="110" y="323" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcT-TK-63v">
+                                <rect key="frame" x="110" y="491" width="194" height="45"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="H3Z-iV-Lna"/>
+                                </constraints>
+                                <state key="normal" title="Ir a la otra ventana">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yiP-JV-hw1" kind="show" identifier="ventana2" id="zqX-5A-gDS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OcT-TK-63v" secondAttribute="bottom" constant="326" id="5Ko-Dr-2nV"/>
+                            <constraint firstItem="4kb-Wo-hsU" firstAttribute="trailing" secondItem="OcT-TK-63v" secondAttribute="trailing" id="8xt-Sq-r69"/>
+                            <constraint firstItem="DXL-2Y-WSq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JOg-3G-u0D"/>
+                            <constraint firstItem="DXL-2Y-WSq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="119" id="kDp-rj-sZn"/>
+                            <constraint firstItem="DXL-2Y-WSq" firstAttribute="leading" secondItem="4kb-Wo-hsU" secondAttribute="leading" id="qnb-zr-QNb"/>
+                            <constraint firstItem="4kb-Wo-hsU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="323" id="rl4-cD-Qnr"/>
+                            <constraint firstItem="DXL-2Y-WSq" firstAttribute="trailing" secondItem="4kb-Wo-hsU" secondAttribute="trailing" id="t6s-sk-2Fz"/>
+                            <constraint firstItem="DXL-2Y-WSq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="tmj-Zc-IbP"/>
+                            <constraint firstItem="4kb-Wo-hsU" firstAttribute="leading" secondItem="OcT-TK-63v" secondAttribute="leading" id="xia-Un-bKL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblContador" destination="4kb-Wo-hsU" id="Un5-Ys-qeG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </scene>
+        <!--View2 Controller-->
+        <scene sceneID="ldk-ia-RNN">
+            <objects>
+                <viewController id="yiP-JV-hw1" customClass="View2Controller" customModule="Ejemplo01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FC9-Jp-orp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soy la otra ventana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJD-PW-HP5">
+                                <rect key="frame" x="23" y="74" width="370" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j9-57-pi1">
+                                <rect key="frame" x="23" y="233" width="370" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rk1-ty-O0K"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zDs-sr-Z2g"/>
+                    <connections>
+                        <outlet property="lblDestino" destination="5j9-57-pi1" id="vE1-wt-ovZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cq5-0y-xAF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+</document>
